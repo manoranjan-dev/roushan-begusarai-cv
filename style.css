@@ -17,7 +17,7 @@
 body {
     background-color: #fafffe;
     color: var(--primary-color);
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: 500;
     font-style: normal;
     display: flex;
@@ -34,6 +34,19 @@ body {
     
     p{
         margin: 8px 0;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    h2{
+        /* font-family: "Roboto Condensed", sans-serif; */
+        font-size: 24px;
+        color: var(--primary-color);
+        margin: 12px 0;
+    }
+
+    h3{
+        font-size: 20px;
     }
 
     .container {
@@ -42,23 +55,35 @@ body {
         /* border: 1px solid; */
         margin: 2rem 1rem;
         padding: 0;
-
-        .medium-bold{
-            font-weight: 600;
+        
+        section{
+            margin-bottom: 2.4rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--secondary-color);
         }
 
+        .medium-bold{
+            font-weight: 700;
+        }
+
+        .child-detail{
+            margin: 0 1.2rem;
+            padding: 0 0 0 12px;
+            border-left: 1px dotted var(--secondary-color);
+        }
+
+        /* identity style starts */
         .identity {
             display: flex;
             justify-content: space-between;
-            /* padding: 0 0 1px 0; */
-            border-bottom: 2px solid var(--border-color);
+            /* margin: 0 0 2rem 0; */
 
             h1 {
                 font-family: "Roboto Condensed", sans-serif;
                 font-optical-sizing: auto;
                 font-size: 32px;
                 font-weight: 700;
-                color: var(--heading-color);
+                color: var(--primary-color);
             }
 
             .id-info{
@@ -68,7 +93,45 @@ body {
                 /* display: flex; */
                 margin-left: 20px;
                 max-width: 160px;
+                padding: 6px;
             }
+        }
+
+        @media (max-width: 652px){
+            .identity{
+                flex-direction: column-reverse;
+
+                .id-img{
+                    width: 100%;
+                    margin: 0;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+                .id-info{
+                    margin: 0;
+                }
+            }
+        }
+        /* identity style ends */
+
+        .qualification{
+            padding-left: 12px;
+        }
+
+        .experience{
+            padding: 0 0 1.3rem 20px;
+        }
+
+        .session{
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        ul{
+            list-style: none;
         }
     }
 }
